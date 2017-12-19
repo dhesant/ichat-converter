@@ -25,8 +25,14 @@ print("Time,Sender,Message,BColor, Font, FColor, FSize")
 for msg in lst:
     if msg['Sender'] is None:
         print(msg['Time'], ",\"", msg['MessageText']['NSString'], "\" , System")
+    elif msg['Color'] is None:
+        print(msg['Time'], ",\"", msg['MessageText']['NSString'], "\",\"", msg['Sender']['ID'])
     else:
-        print(msg['Time'], ",\"", msg['MessageText']['NSString'], "\",\"", msg['Sender']['ID'], "\",\"", msg['Color']['NSRGB'], "\",\"", msg['MessageText']['NSAttributes']['NSFont']['NSName'], "\",\"", msg['MessageText']['NSAttributes']['NSColor']['NSRGB'], "\",", msg['MessageText']['NSAttributes']['NSFont']['NSSize'])
+        msgfmt = msg['MessageText']['NSAttributes']                
+        if isinstance(msgfmt, ccl_bplist.NsKeyedArchiverList):
+            msgfmt = msgfmt[0]
+        else:
+            print(msg['Time'], ",\"", msg['MessageText']['NSString'], "\",\"", msg['Sender']['ID'], "\",\"", msg['Color']['NSRGB'], "\",\"", msgfmt['NSFont']['NSName'], "\",\"", msgfmt['NSColor']['NSRGB'], "\",", msgfmt['NSFont']['NSSize'])
 
 
 
