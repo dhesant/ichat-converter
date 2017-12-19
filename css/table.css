@@ -1,0 +1,23 @@
+.selector_table {
+    /*width: 80%;*/
+    display: inline-block;
+    float: center;
+    padding: 1.3em;
+}
+
+.selector_cell {
+    border-radius: 1.3em;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    margin-top: 1px;
+    margin-bottom: 1px;
+
+    font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #fff;
+    width: 150,px;
+}
