@@ -10,6 +10,36 @@ ul {
   font-family: Helvetica, Arial, sans-serif;
 }*/
 
+/* Status Message Formatting */
+.sysmsg {
+    display: block;
+    clear: both;
+    text-align: center;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+    font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .40);
+}
+
+/* Username Formatting */
+.usrnme {
+    display: block;
+    clear: both;
+    text-align: left;
+
+    padding-left: 12px;
+    margin-bottom: 1px;
+    
+    font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .40);
+}
+
+/* Generic Message Formatting */
 .bubble {
     border-radius: 1.3em;
 
@@ -26,9 +56,27 @@ ul {
     font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
     font-size: 14px;
 
-    max-width: 55%;
+    max-width: 85%;
 }
 
+@media all and (min-width: 920px) {
+    .bubble {
+	box-sizing:content-box;
+	max-width:70%;
+    }
+}
+@media all and (min-width: 1211px) {
+    .bubble {
+	max-width:55%;
+    }
+}
+@media all and (min-width: 1600px) {
+    .bubble {
+	max-width:60%;
+    }
+}
+
+/* Bubble Grouping Formatting */
 .bubble:first-of-type {
     border-top-left-radius: 1.3em !important;
     border-top-right-radius: 1.3em !important;
@@ -39,6 +87,7 @@ ul {
     border-bottom-right-radius: 1.3em !important;
 }
 
+/* Bubble User Formatting */
 .me .bubble {
     float: right;
     background-color: #0084ff;
@@ -55,6 +104,7 @@ ul {
     border-bottom-left-radius: 4px;
 }
 
+/* Colors */
 .messenger_blue .me .bubble {
     background-color: rgb(0, 132, 255);
 }
