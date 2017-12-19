@@ -20,11 +20,11 @@ ccl_bplist.set_object_converter(ccl_bplist.NSKeyedArchiver_common_objects_conver
 
 lst = obj['NS.objects'][2]
 
-print("Time,Sender,Message,BColor, Font, FColor, FSize")
+print("Time, Sender, Message, BColor, Font, FColor, FSize")
 
 for msg in lst:
     if msg['Sender'] is None:
-        print(msg['Time'], ",\"", msg['MessageText']['NSString'], "\" , System")
+        print(msg['Time'], ",\"", msg['MessageText']['NSString'], "\",\"", msg['Subject']['ID'], "\" , System")
     elif msg['Color'] is None:
         print(msg['Time'], ",\"", msg['MessageText']['NSString'], "\",\"", msg['Sender']['ID'])
     else:
