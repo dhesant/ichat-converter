@@ -1,0 +1,94 @@
+/* System message formatting */
+.system-message {
+    display: block;
+    clear: both;
+    text-align: center;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+    font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .40);
+}
+
+/* Username formatting */
+.username {
+    display: block;
+    clear: both;
+    text-align: left;
+
+    padding-left: 12px;
+    margin-bottom: 1px;
+    
+    font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .40);
+}
+
+/* Generic Message Formatting */
+.message {
+    border-radius: 1.3em;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+
+    display: block;
+    clear: both;
+
+    font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1;
+
+    max-width: 85%;
+}
+
+@media all and (min-width: 920px) {
+    .message {
+	box-sizing:content-box;
+	max-width:70%;
+    }
+}
+@media all and (min-width: 1211px) {
+    .message {
+	max-width:55%;
+    }
+}
+@media all and (min-width: 1600px) {
+    .message {
+	max-width:60%;
+    }
+}
+
+/* /\* Bubble Grouping Formatting *\/ */
+/* .message:first-of-type { */
+/*     border-top-left-radius: 1.3em !important; */
+/*     border-top-right-radius: 1.3em !important; */
+/* } */
+
+/* .message:last-of-type { */
+/*     border-bottom-left-radius: 1.3em !important; */
+/*     border-bottom-right-radius: 1.3em !important; */
+/* } */
+
+/* Bubble User Formatting */
+.host-message {
+    align-self: flex-end;
+    background: #f1f0f0;
+    color: #000000;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.guest-message {
+    align-self: flex-start;
+    background-color: #0084ff;
+    color: #ffffff;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
